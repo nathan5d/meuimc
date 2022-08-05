@@ -12,7 +12,7 @@ export type Level = {
 };
 export const levels: Level[] = [
   {
-    title: "Magresa",
+    title: "Magreza",
     class: "info",
     color: "",
     icon: ThumbsDown,
