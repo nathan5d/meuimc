@@ -1,0 +1,22 @@
+:root {
+  --primary-500: #a588f4;
+  --primary-700: #454974;
+  --secondary-500: #a0d29f;
+  --secondary-700: #69c767;
+  --light-100: #f9ffff;
+  --light-200: #fff9ff;
+  --background: #f9ffff;
+
+  --text: #333;
+  --text-contrast: var(--light-100);
+  --caption: #8d8d99;
+  --gray: #e1e1e6;
+  --background-light: rgba(255, 255, 255, 0.05);
+
+  --info: var(--primary-500);
+  --success: var(--secondary-500);
+  --alert: #e4b723;
+  --danger: #ce203b;
+
+  --padding-default: 20px;
+}

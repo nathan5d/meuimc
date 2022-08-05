@@ -1,0 +1,30 @@
+@import "vars";
+@import "reset";
+
+body {
+  background-color: var(--ligth-100);
+  color: var(--primary-700);
+
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.info {
+  background-color: var(--info);
+}
+.success {
+  background-color: var(--success);
+}
+
+.alert {
+  background-color: var(--alert);
+}
+.danger {
+  background-color: var(--danger);
+}
+
