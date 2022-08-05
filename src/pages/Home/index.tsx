@@ -1,17 +1,19 @@
-import { ArrowRight} from "phosphor-react";
+import { ArrowRight } from "phosphor-react";
 import { useState } from "react";
 import { Header } from "../../components/Header";
 import { Number } from "../../components/Input";
 import { levels, calculateImc, Level } from "../../helpers/imc";
 import { GridItem, ReturnIcon } from "../../components/GridItem";
-import {IoLogoGithub} from "react-icons/io";
+import { IoLogoGithub } from "react-icons/io";
 import "./style.scss";
 
 export default function Home() {
   const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
   const [toShow, setToShow] = useState<Level | null>(null);
-  const handleCalculateImc = () => {
+
+  const handleCalculateImc = (event) => {
+    event.preventDefault();
     if (height && weight) {
       setToShow(calculateImc(height, weight));
     } else {
@@ -35,22 +37,27 @@ export default function Home() {
             IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela
             OMS para calcular o peso ideal de cada pessoa.
           </p>
-
-          <Number
-            type={"number"}
-            placeholder="Em metros. Ex.: 1.80"
-            value={height > 0 ? height : ""}
-            onChange={(e) => setHeight(parseFloat(e.target.value))}
-          />
-          <Number
-            type={"number"}
-            placeholder="Em Kg. Ex.: 75"
-            value={weight > 0 ? weight : ""}
-            onChange={(e) => setWeight(parseFloat(e.target.value))}
-          />
-          <button type="button" className="button" onClick={handleCalculateImc}>
-            Calcular <ArrowRight size={24} />
-          </button>
+          <form>
+            <Number
+              type={"number"}
+              placeholder="Em metros. Ex.: 1.80"
+              value={height > 0 ? height : ""}
+              onChange={(e) => setHeight(parseFloat(e.target.value))}
+            />
+            <Number
+              type={"number"}
+              placeholder="Em Kg. Ex.: 75"
+              value={weight > 0 ? weight : ""}
+              onChange={(e) => setWeight(parseFloat(e.target.value))}
+            />
+            <button
+              type="submit"
+              className="button"
+              onClick={handleCalculateImc}
+            >
+              Calcular <ArrowRight size={24} />
+            </button>
+          </form>
         </div>
         <div className="row-r">
           {!toShow && (
@@ -71,7 +78,7 @@ export default function Home() {
         </div>
       </div>
       <footer className="footer">
-        Powered by 
+        Powered by
         <a
           href="https://github.com/nathanams5d/"
           style={{
@@ -80,7 +87,6 @@ export default function Home() {
             justifyContent: "center",
             textDecoration: "none",
             marginLeft: 5,
-           
           }}
           target="_blank"
         >
