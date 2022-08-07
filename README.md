@@ -7,7 +7,7 @@ MeuIMC foi desenvolvido em [React](https://pt-br.reactjs.org/) e traz uma forma 
 ### Ícones
 [Phosphor](https://phosphoricons.com/)
 
-    npm i phosphor-react`
+    npm i phosphor-react
     
 
 [React Icons](https://react-icons.github.io/react-icons/)
