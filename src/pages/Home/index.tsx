@@ -12,7 +12,7 @@ export default function Home() {
   const [weight, setWeight] = useState(0);
   const [toShow, setToShow] = useState<Level | null>(null);
 
-  const handleCalculateImc = (event) => {
+  const handleCalculateImc = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     if (height && weight) {
       setToShow(calculateImc(height, weight));
