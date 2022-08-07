@@ -80,7 +80,7 @@ export default function Home() {
       <footer className="footer">
         Powered by
         <a
-          href="https://github.com/nathanams5d/"
+          href="https://github.com/nathan5d/"
           style={{
             display: "flex",
             alignItems: "center",
@@ -98,7 +98,7 @@ export default function Home() {
             }}
             size={18}
           />
-          nathanams5d
+          nathan5d
         </a>
       </footer>
     </div>
